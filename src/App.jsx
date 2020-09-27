@@ -5,14 +5,17 @@ import CoinSummary from './pages/CoinSummary';
 import Header from './components/Header';
 import CoinDetail from './pages/CoinDetail';
 import './App.css'
+import { WatchListContextProvider } from './context/watchListContext';
 
 const App = () => {
     return (
         <div>
-            <BrowserRouter>
-            <Header />
-                <Route exact path="/" component={ CoinSummary }></Route>
-            </BrowserRouter>
+            <WatchListContextProvider>
+                <BrowserRouter>
+                <Header />
+                    <Route exact path="/" component={ CoinSummary }></Route>
+                </BrowserRouter>
+            </WatchListContextProvider>
         </div>
     );
 };
