@@ -25,7 +25,7 @@ const CoinList = () => {
         };
 
         fetchData();
-    });
+    }, []);
 
     const renderCoins = () => {
         if (isLoading) {
@@ -44,11 +44,8 @@ const CoinList = () => {
             </ul>
         );
     }
-    return (
-        <div>
-            { renderCoins() }
-        </div>
-    );
+
+    return ( <div>{ renderCoins() }</div> );
 };
 
 export default CoinList;
