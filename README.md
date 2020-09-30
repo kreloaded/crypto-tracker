@@ -1,1 +1,2 @@
-crypto-tracker - React based crypto-currency tracking application
+# crypto-tracker 
+## React based crypto-currency tracking application
